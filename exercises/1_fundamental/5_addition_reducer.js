@@ -9,7 +9,17 @@ class Store {
 }
 
 // Insert your code after this line
-
+let reducer =(state, action) => {
+    switch(action.type){
+        case "subtraction":
+            return state - action.content;
+        case "multiplication":
+            return state * action.content;
+        case "addition":
+            return state + action.content;
+    }
+    return state;
+}
 // Insert your code before this line
 
 

@@ -9,7 +9,22 @@ class Store {
 }
 
 // Insert your code after this line
-
+let reducer = function (state, action) {
+    switch (action.type) {
+        case "setUsername":
+            return {... state, username: action.name};
+        case "setPassword":
+            return {... state, password: action.pwd};
+        case "setFirstName":
+            return {... state, firstName: action.name};
+        case "setLastName":
+            return {... state, lastName: action.name};
+        case "setAge":
+            return {... state, age: action.ageInYears};
+        default: 
+        return state;
+    }
+}
 // Insert your code before this line 
 
 let store = new Store(reducer, {

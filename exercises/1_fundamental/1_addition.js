@@ -21,7 +21,7 @@ let reducer = function (state, action) {
 let store = new Store(reducer, 5)
 
 // Insert your code after this line
-
+store.dispatch({type:"multiply", content: 1.4})
 // Insert your code before this line
 
 if (store.state !== 7) {

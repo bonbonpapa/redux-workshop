@@ -9,6 +9,18 @@ class Store {
 }
 
 // Insert your code after this line
+function reducer(state, action) {
+    switch(action.type) {
+        case "withdrawEverything":
+            return {numTransactions: state.numTransactions + 1, balance: 0};
+        case "deposit":
+            return {numTransactions: state.numTransactions + 1, balance: state.balance + action.amount};
+        case "withdraw":
+            return {numTransactions: state.numTransactions + 1, balance: state.balance - action.amount};
+        default: 
+        return state;
+    }
+}
 
 // Insert your code before this line 
 

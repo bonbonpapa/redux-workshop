@@ -21,7 +21,8 @@ let reducer = function (state, action) {
 let store = new Store(reducer, { todos: [] })
 
 // Insert your code after this line
-
+store.dispatch({type:"addTodo", content: ["jog","shop"]})
+//store.dispatch({type:"addTodo", content: "shop"})
 // Insert your code before this line 
 
 
